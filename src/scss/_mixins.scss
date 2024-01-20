@@ -1,0 +1,126 @@
+@mixin display-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin display-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin display-start-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@mixin display-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin display-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin display-inline-justify-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin display-justify-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin display-justify-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin display-align-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+// button mixins
+@mixin common-button-base {
+  position: relative;
+  display: inline-block;
+  font-family: "Recoleta Alt";
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $white-ff;
+  border-radius: 100px;
+  background: transparent;
+  padding: 21px 37px;
+  box-shadow: $box-shadow-1;
+  transition: all 500ms ease-in-out;
+
+  &:hover {
+    color: $white-ff;
+    box-shadow: $box-shadow-2;
+    background: $white-ff;
+    &::after {
+      color: $white-ff;
+    }
+    span {
+      background: $gradient-1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &::after {
+    border-radius: 100px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+@mixin common-button-solid {
+  @include common-button-base;
+  &::after {
+    background: $gradient-2;
+  }
+}
+
+@mixin common-button-outlined {
+  @include common-button-base;
+  &::after {
+    background: $bg-opacity-1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@mixin body-common-button-solid {
+  @include common-button-base;
+  &::after {
+    // background: $bg-opacity-1;
+    background: $gradient-3;
+    backdrop-filter: blur(10px);
+  }
+  svg {
+    transition: transform 0.3s ease-out;
+  }
+  &:hover {
+    svg {
+      color: $pink-b9;
+      transform: translateX(10px);
+      transition: transform 0.3s ease-out;
+    }
+  }
+}

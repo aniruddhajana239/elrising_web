@@ -1,0 +1,108 @@
+.main_banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: gray;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $blue-1a;
+    opacity: 0.8;
+  }
+  .text_wrap {
+    @include display-justify-center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    .hero-greditent {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      height: 221px;
+    }
+    .logo {
+    }
+    .title {
+      text-align: center;
+      p {
+        font-family: $salsa-font;
+        font-size: 80px;
+        color: $white-ff;
+      }
+    }
+    .btn_wrap{
+      @include display-justify-center;
+      gap: 20px;
+      margin-top: 40px;
+      button{
+        min-width: 238px;
+      }
+    }
+  }
+  .hero-bg-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .hero-bg-content {
+      height: 100%;
+
+      .hero-item-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        width: 100%;
+        height: 100%;
+
+        .hero-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          &.item-1,
+          &.item-3,
+          &.item-5 {
+            justify-content: flex-end;
+            animation: bannerSlideup 45s linear infinite;
+          }
+
+          &.item-2,
+          &.item-4 {
+            justify-content: flex-start;
+            animation: bannerSlidedown 90s linear infinite;
+          }
+
+          .img-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 290px;
+            flex: 0 0 auto;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          /* Duplicate images for continuous loop */
+          .img-wrap:not(:last-child) {
+            margin-bottom: 40px; /* Adjust spacing between duplicated images */
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.common_solid{
+    @include common-button-solid;
+}
+.common_outlined{
+    @include common-button-outlined;
+}
+.body_common_solid{
+    @include body-common-button-solid;
+    @include display-align-center;
+    gap: 10px;
+}

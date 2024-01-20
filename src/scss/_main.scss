@@ -1,0 +1,202 @@
+.main_body {
+  background: #1b1c35;
+  margin-top: 100vh;
+  position: relative;
+  z-index: 3;
+  .about_company {
+    display: flex;
+    gap: 40px;
+    .left {
+      position: relative;
+      width: 60%;
+      padding-bottom: 175px;
+      .shape_wrap {
+        visibility: hidden;
+        left: -40px;
+        z-index: -1;
+        bottom: 80px;
+        position: absolute;
+        img {
+          height: auto;
+          max-width: 100%;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+      .about_img_1,
+      .about_img_2 {
+        visibility: hidden;
+        img {
+          height: auto;
+          max-width: 100%;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+      .about_img_1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .right {
+      width: 40%;
+      .top {
+        right: 125px;
+        top: 120px;
+        width: 720px;
+        position: absolute;
+        visibility: hidden;
+      }
+      .bottom {
+        padding-top: 270px;
+        visibility: hidden;
+        ul {
+          background: linear-gradient(
+            97.31deg,
+            rgba(235, 92, 24, 0.11199) 0%,
+            rgba(249, 80, 85, 0.11199) 45.72%,
+            rgba(202, 45, 184, 0.11199) 100%
+          );
+        }
+        .btn_wrap {
+          @include display-space-between;
+          .call_us {
+            color: $white-ff;
+            @include display-align-center;
+            gap: 10px;
+            .call_icon {
+              @include display-justify-center;
+              background: #ff3838;
+              border-radius: 100%;
+              height: 40px;
+              width: 40px;
+            }
+            .number {
+              h3 {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.animate {
+      .shape_wrap {
+        animation: zoomIn 1s ease-in-out forwards;
+        visibility: visible;
+      }
+      .about_img_1 {
+        visibility: visible;
+        animation: fadeInUp 1s ease-in-out forwards;
+      }
+      .about_img_2 {
+        visibility: visible;
+        animation: fadeInRight 1s ease-in-out forwards;
+      }
+      .top {
+        animation: zoomIn 1s ease-in-out forwards;
+        visibility: visible;
+      }
+      .bottom {
+        visibility: visible;
+        animation: fadeInRight 1s ease-in-out forwards;
+      }
+    }
+  }
+  .services {
+    .title_wrap {
+      margin-bottom: 60px;
+      @include display-space-between;
+      .inner {
+        width: 55%;
+      }
+      .btn_wrap {
+        width: 45%;
+        @include display-justify-end;
+      }
+    }
+    .service_slider {
+      .image_wrap {
+        position: relative;
+        .content_wrap {
+          position: absolute;
+          bottom: 20px;
+          padding: 0 25px;
+          @include display-space-between;
+          width: 100%;
+          .title {
+            font-size: 35px;
+            color: $white-ff;
+            font-family: $salsa-font;
+          }
+          .icon_wrap {
+            @include display-justify-center;
+            height: 50px;
+            width: 50px;
+            background: #ff3838;
+            border-radius: 100%;
+            cursor: pointer;
+            svg {
+              color: $white-ff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .why_choose_us {
+    @include display-align-center;
+    &.animate {
+      .shape1 {
+        animation: fadeInLeft 1s ease-in-out forwards !important;
+      }
+    }
+    .left {
+      width: 50%;
+      .img_wrap {
+        .parent {
+          position: relative;
+          .shape1 {
+            animation: fadeInRight 1s ease-in-out forwards;
+          }
+          .shape2 {
+            position: absolute;
+            top: 0;
+          }
+          .shape3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: rotateAnimationY 10s linear infinite;
+          }
+          .shape4 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: rotateAnimationX 10s linear infinite;
+          }
+          .service_img {
+            position: absolute;
+            top: 60px;
+            left: 40px;
+          }
+        }
+      }
+    }
+    .right {
+      width: 50%;
+      .small_text{
+        margin: 30px 0;
+      }
+      .features{
+        li{
+          font-size: 25px;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}

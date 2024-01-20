@@ -1,0 +1,28 @@
+.main_title {
+  color: $white-ff;
+  font-family: $roboto-font;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+}
+.sub_title {
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #ff3838;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 50px;
+    right: -60px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: #ff3838;
+  }
+}
+.small_text{
+    color: rgba(255, 255, 255, 0.6999);
+}
