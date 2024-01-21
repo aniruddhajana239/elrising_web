@@ -16,7 +16,6 @@ $blue-35: #1b1c35;
 $blue-02: #9f72ff;
 $pink-b9: #fd50b9;
 
-
 //box shadow
 $box-shadow-1: 0 0 0px 0px #fd50b9 inset, 0 0 0 0 #fd50b9;
 $box-shadow-2: 0 0 10px 0 #fd50b9 inset, 0 0 10px 4px #fd50b9;
@@ -26,8 +25,19 @@ $gradient-1: var(
   --Linear,
   linear-gradient(90deg, #5a56f0 -1.33%, #fd50b9 100%)
 );
-$gradient-2: var(--Linear, linear-gradient(90deg, #5a56f0 -1.33%, #fd50b9 100%));
-$gradient-3: var(--linear, linear-gradient(135deg, #EB5C18 0%, #F95055 45.72%, #CA2DB8 100%));
+$gradient-2: var(
+  --Linear,
+  linear-gradient(90deg, #5a56f0 -1.33%, #fd50b9 100%)
+);
+$gradient-3: var(
+  --linear,
+  linear-gradient(135deg, #eb5c18 0%, #f95055 45.72%, #ca2db8 100%)
+);
+$gradient-4: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.28) 0%,
+  rgba(27, 28, 53, 0.44) 100%
+);
 
 // opaciy bg
-$bg-opacity-1: rgba(255, 255, 255, 0.1)
+$bg-opacity-1: rgba(255, 255, 255, 0.1);

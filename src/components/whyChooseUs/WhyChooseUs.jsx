@@ -15,9 +15,10 @@ const WhyChooseUs = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-          } else {
-            entry.target.classList.remove("animate");
-          }
+          } 
+          // else {
+          //   entry.target.classList.remove("animate");
+          // }
         });
       },
       { threshold: 0.5 } // Adjust the threshold as needed
@@ -30,7 +31,7 @@ const WhyChooseUs = () => {
   }, []);
   return (
     <Fragment>
-      <div className="why_choose_us section" ref={serviceRef}>
+      <div className="why_choose_us section container" ref={serviceRef}>
         <div className="left">
           <div className="img_wrap">
             <div className="parent">
@@ -43,14 +44,16 @@ const WhyChooseUs = () => {
           </div>
         </div>
         <div className="right">
-          <span className="sub_title">WHY CHOOSE US</span>
-          <h1 className="main_title">Experts Services to Change Business</h1>
-          <p className="small_text">
-            In nec libero luctus, aliquet turpis at, vehicula nisi. Cras eget
-            mauris in nisl tempus lobortis. Nunc in nisi sapien. Suspendisse
-            finibus dolo et pharetra porta. Sed quam elit, lacinia vitae mi
-            quis,
-          </p>
+          <div className="top">
+            <span className="sub_title">WHY CHOOSE US</span>
+            <h1 className="main_title">Experts Services to Change Business</h1>
+            <p className="small_text">
+              In nec libero luctus, aliquet turpis at, vehicula nisi. Cras eget
+              mauris in nisl tempus lobortis. Nunc in nisi sapien. Suspendisse
+              finibus dolo et pharetra porta. Sed quam elit, lacinia vitae mi
+              quis,
+            </p>
+          </div>
           <ul className="features">
             <li>
               <div className="icon"></div>

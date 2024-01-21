@@ -1,0 +1,11 @@
+.custom-cursor {
+    position: fixed;
+    width: 30px; /* Adjust the default size of the cursor as needed */
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark shadow color */
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 9999;
+  }

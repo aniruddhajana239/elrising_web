@@ -1,13 +1,16 @@
 // Layout.js
-import React from "react";
+import React, { Fragment } from "react";
 import Header from "./../components/header/Header";
+import Cursor from "../components/cursor/Cursor";
 
 const Layout = ({ children }) => {
+  
   return (
-    <React.Fragment>
+    <div className="elrising_web">
+       <Cursor />
       <Header />
       <div className="route_wrap">{children}</div>
-    </React.Fragment>
+    </div>
   );
 };
 

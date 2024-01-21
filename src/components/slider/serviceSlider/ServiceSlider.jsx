@@ -16,7 +16,7 @@ const ServiceSlider = (props) => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
         autoplay={{
-          delay: 1500,
+          delay: 150000,
           disableOnInteraction: false,
         }}
         // speed={800} // Adjust the speed (in milliseconds) as needed
@@ -41,7 +41,7 @@ const ServiceSlider = (props) => {
             return (
               <SwiperSlide key={index}>
                 <div className="image_wrap">
-                  <img src={item.image} alt="" />
+                  <img src={item.image} alt="" className="slider_img"/>
                   <div className="content_wrap">
                     <p className="title">{item.title}</p>
                     <div className="icon_wrap">
